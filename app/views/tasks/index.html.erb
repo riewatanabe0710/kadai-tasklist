@@ -2,6 +2,8 @@
 
 <ul>
   <% @Tasks.each do |task| %>
-    <li><%= task.content %></li>
+    <li><%= link_to task.id, message %> : <%= task.content %></li>
   <% end %>
 </ul>
+
+<%= link_to '新規メッセージの投稿', new_message_path %>
