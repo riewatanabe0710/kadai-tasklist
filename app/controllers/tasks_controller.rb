@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
+    @Task = Task.find(params[:id])
   end
 
   def new
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @Task = task.find(params[:id])
+    @Task = Task.find(params[:id])
     @Task.destroy
 
     flash[:success] = 'Task は正常に削除されました'
